@@ -26,7 +26,8 @@ $breakpoints: (
   animation-name: move-flying-envelope;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-out;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
 }
 
 @mixin animationOddWorks {

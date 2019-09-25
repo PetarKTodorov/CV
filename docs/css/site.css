@@ -304,6 +304,8 @@ form input, form textarea {
     background-color: #e7eab3;
     color: #303f21;
     transition: all 0.4s ease-out; }
+    .main-navigation-nav a:hover span:before {
+      transition: all 0.4s ease-out; }
   .main-navigation-nav .pr-info li:nth-child(1) a:hover span:before {
     content: url("../images/icons/navigation-menu/pc-media/user-alt-solid.svg"); }
   .main-navigation-nav .pr-info li:nth-child(2) a:hover span:before {
@@ -619,7 +621,7 @@ form input, form textarea {
         .about-me .page-content .page-menu nav ul li:hover a:hover {
           -webkit-transform: scale(1.2);
                   transform: scale(1.2);
-          transition: all 0.5s ease-out; }
+          transition: all 0.3s ease-out; }
     .about-me .page-content #tech-stack {
       grid-area: tech-stack; }
     .about-me .page-content #personal-skills {
@@ -941,8 +943,9 @@ form input, form textarea {
               animation-duration: 5s;
       -webkit-animation-iteration-count: infinite;
               animation-iteration-count: infinite;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out; } }
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear;
+      animation-direction: alternate-reverse; } }
 
 @media (min-width: 1025px) {
   .contact .page-content form .submit-button {

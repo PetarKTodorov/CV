@@ -102,6 +102,10 @@
             background-color: $main-header-background-color;
             color: $headings-text-color;
             @include animationEaseOut(0.4);
+
+            & span:before {
+                @include animationEaseOut(0.4);
+            }
         }
 
         .pr-info li:nth-child(1) a:hover span:before { content: url('../images/icons/navigation-menu/pc-media/user-alt-solid.svg'); }

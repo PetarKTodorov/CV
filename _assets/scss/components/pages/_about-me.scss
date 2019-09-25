@@ -487,7 +487,7 @@
 
                             & a:hover {
                                 transform: scale(1.2);
-                                @include animationEaseOut(0.5);
+                                @include animationEaseOut(0.3);
                             }
                         }
                     }
