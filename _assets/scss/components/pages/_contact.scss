@@ -1,0 +1,72 @@
+.contact {
+   & .page-content {
+      & form {
+         & input, & textarea {
+            border: 0.5px solid $headings-text-color;
+            border-radius: 8px;
+            box-shadow: 0 1px 1px rgba(rgb(0, 0, 0), 0.1);
+            width: 100%;
+            margin-bottom: 0.5em;
+         }
+   
+         & textarea {
+            height: 30vh;
+            margin-bottom: 0;
+         }
+
+         & p {
+            font-size: 0.6em;
+            padding-bottom: 0.5em;
+            text-align: right;
+            color: rgb(117, 117, 117);
+         }
+   
+         & .submit-button {
+            border-radius: 8px;
+            background: $headings-text-color;
+            color: $main-header-background-color;
+            text-shadow: 0 1px 0 rgba(0,0,0,0.16);
+            width: 100%;
+         }
+      }
+
+      & div.media {
+         margin-top: 1em;
+         text-align: center;
+      }
+   }
+}
+
+@include mediaScreenFor($tablet) {
+   .contact {
+      & .page-content {
+         & div.media {
+            text-align: unset;
+   
+            & img {
+               position: relative;
+               @include animationFlyingEnvelope();
+            }
+         }
+      }
+   }
+}
+
+@include mediaScreenFor($pc) {
+   .contact {
+      & .page-content {
+         & form {
+            & .submit-button {
+               width: 10%;
+               float: right;
+            }
+         }
+
+         & form:after {
+            display: block;
+            content: '';
+            clear: both;
+         }
+      }
+   }
+}

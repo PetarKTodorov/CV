@@ -1,0 +1,66 @@
+body {
+    background-color: $primary-background-color;
+}
+
+#site {
+    $site: &;
+
+    @at-root #{$site}-header, 
+    #{$site}-content, 
+    #{$site}-footer {
+      max-width: 65rem;
+      margin: 0 auto;
+    }
+
+    @at-root #{$site}-content {
+      background-color: $primary-background-color;
+  
+      & > section:first-of-type {
+        background-color: $secondary-background-color;
+        padding: 1em;
+
+        & > header:first-of-type {
+          text-align: center;
+
+          & h2 {
+             padding: 0;
+          }
+    
+          & p {
+             font-style: italic;
+          }
+        }
+      }
+    }
+}
+
+@include mediaScreenFor($pc) {
+  #site {
+    #site-content {
+      & > section:first-of-type {
+        position: relative;
+
+        & > header:first-of-type {
+          position: absolute;
+          width: 70%;
+          top: -125px;
+        }
+      }
+    }
+  }
+}
+
+
+@include mediaScreenFor($site-min-width) {
+  #site {
+    display: none;
+  }
+
+  body::after {
+    display: block;
+    content: 'Sorry ERROR site width must be more or equal to 260px.';
+    text-align: center;
+    color: white;
+    padding: 2em;
+  }
+}

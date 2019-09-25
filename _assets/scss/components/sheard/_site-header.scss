@@ -1,0 +1,78 @@
+#site-header {
+    background-color: $main-header-background-color;
+
+    & .general-information {
+        padding: 0 0.2em 0.5em 0.2em;
+
+        & h1 {
+            text-align: center;
+            padding-top: 0;
+        }
+
+        & .avatar-image {
+            min-height: 15rem;
+            width: 16rem;
+            border-radius: 50%;
+            border: 2px solid $main-nav-background-color;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            box-shadow: 0 0 2rem 0.5rem rgba(0,0,0,0.2);
+
+            & img {
+                position: absolute;
+                top: -15%;
+                left: 0;
+	            width: 100%;
+	            height: auto;
+            }
+        }
+    }
+
+    & .main-navigation {
+        background-color: $main-nav-background-color;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 0.2em;
+    }
+}
+
+@include mediaScreenFor($tablet) {
+    #site-header {
+        & .main-navigation {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@include mediaScreenFor($pc) {
+    #site-header {
+        position: relative;
+        min-height: 330px;
+        border-bottom: 1px dashed $secondary-timeline-color;
+
+        & .general-information {
+
+            & h1 {
+                width: 75%;
+                padding-top: 0.7em;
+            }
+
+            & .avatar-image {
+                position: absolute;
+                top: 0.5em;
+                right: 0.5em;
+                z-index: 2;
+            }
+        }
+
+        & .main-navigation {
+            position: absolute;
+            width: 75%;
+            z-index: 1;
+            top: 43%;
+        }
+    }
+}

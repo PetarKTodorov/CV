@@ -1,0 +1,187 @@
+.education {
+   & .page-content {
+      & .vty, & .softuni, & .high-school-of-economics, & .certificates-and-licenses {
+         border: 1px dotted $primary-background-color;
+         border-radius: 25px;
+         padding: 1em;
+         margin-bottom: 0.5em;
+
+         & input {
+            display: none;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+         }
+
+         & label {
+            display: block;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include animationEaseOut(0.5);
+
+            & h3, & h4, & h5 {
+               font-size: 1em;
+               padding: 0 0 0 1.5em;
+            }
+
+            & .average-grade {
+               color: $headings-text-color;
+            }
+         }
+
+         & label:before {
+            content: url('../images/icons/arrows/caret-down-solid.svg');
+            position: absolute;
+            display: block;
+            top: -5px;
+            width: 1em;
+         }
+
+         & input:checked + label {
+            border-bottom: 1px dotted $headings-text-color;
+            padding-bottom: 1em;
+         }
+
+         & input:checked + label:before {
+            content: url('../images/icons/arrows/caret-up-solid.svg');
+         }
+   
+         & input + label + section {
+            display: none;
+         }
+   
+         & input:checked + label + section {
+            display: block;
+         }
+
+         & .knowledge {
+            & .knowledge-header {
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: space-between;
+               border-bottom: 1px dotted $primary-background-color;
+
+               & h4 {
+                  flex-basis: 100%;
+                  font-size: 1em;
+               }
+
+               & span {
+                  position: relative;
+                  display: block;
+                  padding: 0 0.5em 0.5em 1.5em;
+               }
+
+               & span:before {
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  top: 10%;
+                  width: 1em;
+                  display: block;
+               }
+   
+               & span:nth-of-type(1):before {
+                  content: url('../images/icons/info/calendar-alt-solid.svg');
+               }
+   
+               & span:nth-of-type(2):before {
+                  content: url('../images/icons/info/map-marker-alt-solid.svg');
+                  top: 0;
+               }
+   
+               & span:nth-of-type(3):before {
+                  content: url('../images/icons/info/globe-europe-solid.svg');
+               }
+            }
+
+            & .knowledge-content {
+               & label {
+                  padding: 1em 0 1em 0.3em;
+                  border-bottom: 1px dotted $primary-background-color;
+               }
+
+               & label:before {
+                  padding: 1em 0;
+               }
+
+               & > label + section label {
+                  padding-left: 1em;
+               }
+
+               & .course {
+                  padding: 0.5em 0 0.5em 2.6em;
+                  border-bottom: 1px dotted $primary-background-color;
+   
+                  & a {
+                     position: relative;
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+      
+                     & h6 {
+                        font-size: 1em;
+                        padding: 0;
+                     }
+   
+                     & .course-grade {
+                        color: black;
+                     }
+                  }
+   
+                  & a:before {
+                     content: url('../images/icons/arrows/caret-right-solid.svg');
+                     position: absolute;
+                     display: block;
+                     width: 0.5em;
+                     top: 2%;
+                     left: -0.8em;
+                  }
+               }
+            }
+         }
+      }
+
+      & .vty {
+         & .knowledge .knowledge-content p {
+            text-align: center;
+            padding: 0.5em 0 0 0;
+         }
+      }
+
+      & div.media {
+         position: relative;
+         margin-top: 1em;
+   
+         & img {
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: auto;
+         }
+      }
+   
+      & div.media:after {
+         display: block;
+         content: '';
+         padding-top: 56.25%;
+      }
+   }
+}
+
+@include mediaScreenFor($pc) {
+   .education {
+      & .page-content {
+         & .vty, & .softuni, & .high-school-of-economics, & .certificates-and-licenses {
+            & > label {
+               display: block;
+               text-align: center;
+            }
+         }
+      }
+   }
+}

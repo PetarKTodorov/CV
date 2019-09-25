@@ -1,0 +1,12 @@
+form {
+    & input, & textarea {
+        border: none;
+        outline: none;
+        padding: 0.6em;
+
+        &:focus {
+            border: 1px solid $main-a-border-color;
+            box-shadow: 0 0 4px rgba($main-a-border-color, 1);
+        }
+    }
+}

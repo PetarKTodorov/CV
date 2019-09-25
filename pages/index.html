@@ -1,0 +1,147 @@
+---
+layout: main
+title: Home
+permalink: /
+---
+
+<!-- About Me -->
+<section class="about-me">
+    <header>
+        <h2>About Me</h2>
+        <p>You will never cross the ocean unless you take the courage to lose sight of the shore.</p>
+    </header>
+    <section class="page-content">
+
+        <section class="page-menu">
+            <h3>Go to:</h3>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{{ site.baseurl }}/#tech-stack">Tech Stack</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}/#personal-skills">Personal Skills</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}/#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}/#languages">Languages</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}/#passions">Passions</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}/#more">More</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="tech-stack">
+            <header>
+                <h2>Tech Stack</h2>
+            </header>
+            <section>
+                <strong>C#</strong>
+                <strong>ASP.NET Core</strong>
+                <strong>JavaScript</strong>
+                <strong>jQuery</strong>
+                <strong>ExpressJS</strong>
+                <strong>ReactJS</strong>
+                <strong>Angular</strong>
+                <strong>TypeScript</strong>
+                <strong>MS SQL</strong>
+                <strong>MongoDB</strong>
+                <strong>HTML</strong>
+                <strong>CSS</strong>
+            </section>
+        </section>
+
+        <section id="personal-skills">
+            <header>
+                <h2>Personal Skills</h2>
+            </header>
+            <section>
+                {% assign orderedPersonalSkills = site.personalSkills | sort:"orderNumber" %}
+                {{orderedPersonalSkills}}
+            </section>
+        </section>
+
+        <section id="projects">
+            <header>
+                <h2>Most Proud Of Projects</h2>
+            </header>
+            <section>
+                {% assign orderedProjects = site.projects | sort:"orderNumber" %}
+                {{orderedProjects}}
+            </section>
+        </section>
+
+        <section id="languages">
+            <header>
+                <h2>Languages</h2>
+            </header>
+            <section>
+                {% assign orderedSpeakingLanguages = site.speakingLanguages | sort:"orderNumber" %}
+                {{orderedSpeakingLanguages}}
+            </section>
+        </section>
+
+        <section id="passions">
+            <header>
+                <h2>Passions</h2>
+            </header>
+            <section>
+                {% assign orderedPassions = site.passions | sort:"orderNumber" %}
+                {{orderedPassions}}
+            </section>
+        </section>
+
+        <section id="more">
+            <header>
+                <h2>Something More</h2>
+            </header>
+            <section>
+                <section class="my-day">
+                    <header>
+                        <h5>A Day In My Life</h5>
+                    </header>
+                    <section>
+                        <div class="media">
+                            <img src="{{ site.baseurl }}/images/pages/about-me/my-day.png"" alt="'my-day.png' is not found!">
+                        </div>
+                        <div class="legend">
+                            <h5>Legend:</h5>
+                            <p><span>A</span>Sleeping</p>
+                            <p><span>B</span>Working out</p>
+                            <p><span>C</span>Studying</p>
+                            <p><span>D</span>Relaxing</p>
+                            <p><span>E</span>Spending time with friends</p>
+                            <p><span>F</span>Playing games</p>
+                        </div>
+                    </section>
+                </section>
+                <section class="favorite-movies">
+                    <header>
+                        <h5>Favourite Movies:</h5>
+                    </header>
+                    <section>
+                        {% assign orderedFavoriteMovies = site.favoriteMovies | sort:"orderNumber" %}
+                        {{orderedFavoriteMovies}}
+                    </section>
+                </section>
+                <section class="favorite-games">
+                    <header>
+                        <h5>Favourite Games:</h5>
+                    </header>
+                    <section>
+                        {% assign orderedFavoriteGames = site.favoriteGames | sort:"orderNumber" %}
+                        {{orderedFavoriteGames}}
+                    </section>
+                </section>
+            </section>
+        </section>
+
+    </section>
+</section>

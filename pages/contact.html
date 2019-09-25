@@ -1,0 +1,25 @@
+---
+layout: main
+title: Contact
+permalink: /contact/
+---
+
+<section class="contact">
+    <header>
+        <h2>Send me email</h2>
+        <p>Let's work together.</p>
+    </header>
+    <section class="page-content">
+        <form action="https://formspree.io/petar.k.todorov@abv.bg" method="POST">
+            <input name="email" type="email" id="email" placeholder="* Enter your email address" required>
+            <input name="subject" type="text" id="subject" placeholder="* Enter email subject" required>
+            <textarea name="message" type="text" id="message" placeholder="* Message" required></textarea>
+            <p>You are sending email to: petar.k.todorov@abv.bg</p>
+            <button class="btn submit-button" type="submit">Send</button>
+        </form>
+
+        <div class="media">
+            <img src="{{ site.baseurl }}/images/pages/contact/flying-envelope.gif" alt="'flying-envelope.gif' is not found!">
+        </div>
+    </section>
+</section>

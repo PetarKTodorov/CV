@@ -1,0 +1,522 @@
+.about-me {
+    & .page-content {
+        & .page-menu {
+            & h3 {
+                text-align: center;
+                padding-top: 0;
+            }
+    
+            & nav {
+                & ul {
+                    list-style: none;
+                    padding: 0;
+                    text-align: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+        
+                    & li {
+                        flex: 1 0 30%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0.2em;
+                        border: 1px solid $main-nav-background-color;
+                        border-bottom-width: 4px;
+    
+                        & a {
+                            display: block;
+                            padding: 0.5em;
+                            color: $main-a-border-color;
+                            font-weight: bold;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        & > section {
+            & > header {
+                border-bottom: 3px solid $main-nav-background-color;
+    
+                & h2 {
+                    padding-bottom: 0.2em;
+                }
+            }
+        }
+
+
+        & #tech-stack {
+            & section {
+                display: flex;
+                flex-wrap: wrap;
+
+                & strong {
+                    display: block;
+                    margin: 0.5em;
+                    padding: 0.5em;
+                    background-color: $primary-background-color;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        & #personal-skills {
+            & section {
+                .progress {
+                    position: relative;
+                    height: 25px;
+                    background-color: rgb(204, 204, 204);
+                    border-radius: 25px;
+                }
+    
+                .progress:after, .progress:before {
+                    position: absolute;
+                    top: 0; 
+                    bottom: 0;
+                    left: 0;
+                    content: '';
+                }
+    
+                .progress:after {    
+                    background-color: $primary-background-color;
+                    border-radius: 25px;
+                    z-index: 1;
+                }
+    
+                .progress:before {
+                    text-align: center;
+                    width: 100%;
+                    font-size: 0.9em;
+                    z-index: 2;
+                }
+    
+                #responsibility:after {
+                    width: 90%;
+                }
+    
+                #responsibility:before {
+                    content: '90%';
+                }
+
+                #communicative:after {
+                    width: 85%;
+                }
+    
+                #communicative:before {
+                    content: '85%';
+                }
+
+                #creativity:after {
+                    width: 80%;
+                }
+    
+                #creativity:before {
+                    content: '80%';
+                }
+
+                #teamwork:after {
+                    width: 70%;
+                }
+    
+                #teamwork:before {
+                    content: '70%';
+                }
+
+                #leadership:after {
+                    width: 86%;
+                }
+    
+                #leadership:before {
+                    content: '86%';
+                }
+
+                #organized:after {
+                    width: 90%;
+                }
+    
+                #organized:before {
+                    content: '90%';
+                }
+
+                #make-quick-decisions:after {
+                    width: 80%;
+                }
+    
+                #make-quick-decisions:before {
+                    content: '80%';
+                }
+
+                #adapt-to-change:after {
+                    width: 75%;
+                }
+    
+                #adapt-to-change:before {
+                    content: '75%';
+                }
+
+                #make-others-laugh:after {
+                    width: 81%;
+                }
+    
+                #make-others-laugh:before {
+                    content: '81%';
+                }
+
+                #not-panic:after {
+                    width: 90%;
+                }
+    
+                #not-panic:before {
+                    content: '90%';
+                }
+
+                #quick-learning:after {
+                    width: 92%;
+                }
+
+                #quick-learning:before {
+                    content: '92%';
+                }
+
+                #overcome-difficulties:after {
+                    width: 83%;
+                }
+
+                #overcome-difficulties:before {
+                    content: '83%';
+                }
+
+                #transfer-abilities:after {
+                    width: 80%;
+                }
+
+                #transfer-abilities:before {
+                    content: '80%';
+                }
+            }
+        }
+
+        & #projects {
+            & section {
+                & article {
+                    border: 1px dotted $primary-background-color;
+                    border-radius: 25px;
+                    padding: 1em 0.5em 0.5em 0.5em;
+                    margin-top: 0.5em;
+
+                    & header {
+                        text-align: center;
+                        
+                        & h5 {
+                            display: inline;
+                            padding-top: 0;
+                            padding-bottom: 0.3em;
+                            border-bottom: 1px dotted $headings-text-color;
+                        }
+                    }
+
+                    & section {
+                        & p {
+                            padding: 0 0 0.3em 0.3em;
+                        }
+
+                        & .description {
+                            padding: 0.5em 0;
+
+                            p:first-of-type {
+                                color: $headings-text-color;
+                            }
+
+                            & p:last-of-type {
+                                text-indent: 0.5em;
+                            }
+                        }
+    
+                        & .program-languages {
+                            padding: 0 0 0.3em 0.3em;
+                            color: $headings-text-color;
+    
+                            & span {
+                                margin-bottom: 0.2em;
+                                margin-left: 0.5em;
+                                display: inline-block;
+                                padding: 0.3em;
+                                background-color: $primary-background-color;
+                                border-radius: 20px;
+                                color: rgb(0, 0, 0);
+                            }
+                        }
+    
+                        & .link {
+                            & a {
+                                float: right;
+                                position: relative;
+                                padding-right: 0.5em;
+                            }
+    
+                            & a:before {
+                                content: url('../images/icons/info/globe-europe-solid.svg');
+                                display: inline-block;
+                                position: absolute;
+                                width: 1em;
+                                top: 3px;
+                                left: -1.5em;
+                            }
+                        }
+    
+                        & .link:after {
+                            display: block;
+                            content: '';
+                            clear: both;
+                        }
+                    }
+                }
+
+
+
+
+                // & ul {
+                //     padding: 0;
+                //     list-style: none;
+                //     display: flex;
+                //     flex-wrap: wrap;
+                //     justify-content: space-between;
+
+                //     & li {
+                //         border-bottom: 1px dotted $main-nav-background-color;
+                //         padding: 0.5em;
+                //         //flex: 1 0 30%;
+                //     }
+
+                //     & li:before {
+                //         content: url('../images/icons/arrows/caret-right-solid.svg');
+                //         width: 0.2em;
+                //         display: inline-block;
+                //         margin-right: 0.5em;
+                //     }
+                // }
+            }
+        }
+
+        & #languages {
+            & > section {
+                & .parameters {
+                    & .parameter-frame {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+
+                        & p {
+                            padding: 0;
+                            flex: 1 0 45%;
+                        }
+
+                        & .evaluation {
+                            display: flex;
+                            justify-content: space-evenly;
+
+                            & span {
+                                height: 2rem;
+                                width: 2rem;
+                                text-align: center;
+                                display: block;
+                                border: 1px solid black;
+                                border-radius: 50%;
+                                margin-left: 0.2em;
+                                padding: 0.2em;
+                                background-color: black;
+                                color: white;
+                            }
+
+                            & .filled, .half-filled {
+                                border-color: $primary-background-color;
+                            }
+
+                            & .filled {
+                                background-color: $primary-background-color;
+                            }
+
+                            & .half-filled {
+                                background: linear-gradient(to right, $primary-background-color 50%, black 50%);
+                            }
+                        }
+                    }
+
+                    & .parameter-frame:not(:last-child) {
+                        margin-bottom: 0.3em;
+                    }
+                }              
+            }
+        }
+
+        & #passions {
+            & > section {
+
+                & article {
+                    display: flex;
+
+                    & .media {
+                        margin-right: 1rem;
+
+                        & img {
+                            padding: 0.5em;
+                            width: 5rem;
+                            height: 5rem;
+                        }
+                    }
+                }
+
+                & article:not(:last-of-type) {
+                    border-bottom: 1px dotted $main-nav-background-color;
+                }
+            }
+        }
+
+        & #more {
+            & .my-day {
+                & section {
+                    & .media {
+                        & img {
+                            display: block;
+                            width: 100%;
+                            max-width: 800px;
+                            margin: 0 auto;
+                        }
+                    }
+    
+                    & .legend {
+                        display: flex;
+                        flex-wrap: wrap;
+    
+                        & h5 {
+                            flex-basis: 100%;
+                        }
+    
+                        & p {
+                            display: flex;
+                            align-items: center;
+                            flex: 1 0 50%;
+                            min-width: 230px;
+    
+                            & span {
+                                display: block;
+                                text-align: center;
+                                width: 1.5em;
+                                margin-right: 0.5em;
+                            }
+                        }
+    
+                        & p:nth-of-type(1) > span {
+                            background-color: $primary-background-color;
+                        }
+    
+                        & p:nth-of-type(2) > span {
+                            background-color: $headings-text-color;
+                        }
+    
+                        & p:nth-of-type(3) > span {
+                            background-color: rgb(75, 172, 198);
+                        }
+    
+                        & p:nth-of-type(4) > span {
+                            background-color: rgb(155, 187, 89);
+                        }
+    
+                        & p:nth-of-type(5) > span {
+                            background-color: rgb(247, 150, 70);
+                        }
+    
+                        & p:nth-of-type(6) > span {
+                            background-color: $main-nav-background-color;
+                        }
+                    }
+                }
+            }
+
+            & .favorite-movies, & .favorite-games {
+                & section {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+
+                    & article {
+                        flex-basis: 35%;
+                        text-align: center;
+                        border-bottom: 1px dotted $main-nav-background-color;
+                        margin: 1em 0.5em;
+
+                        & .poster {
+                            & img {
+                                width: 180px;
+                                height: 233px;
+                            }
+                        }
+
+                        & p {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaScreenFor($pc) {
+    .about-me {
+        & .page-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 0 4.5em;
+            grid-template-areas: "page-menu page-menu"
+                                 "tech-stack personal-skills"
+                                 "passions personal-skills"
+                                 "passions languages"
+                                 "projects more";
+
+            & .page-menu {
+                grid-area: page-menu;
+
+                & nav {
+                    & ul {
+                        & li:hover {
+                            border-bottom-color: $headings-text-color;
+
+                            & a:hover {
+                                transform: scale(1.2);
+                                @include animationEaseOut(0.5);
+                            }
+                        }
+                    }
+                }
+            }
+            
+            & #tech-stack {
+                grid-area: tech-stack;
+            }
+    
+            & #personal-skills {
+                grid-area: personal-skills;
+            }
+    
+            & #projects {
+                grid-area: projects;
+            }
+    
+            & #languages {
+                grid-area: languages;
+            }
+    
+            & #passions {
+                grid-area: passions;
+            }
+    
+            & #more {
+                grid-area: more;
+            }
+        }
+    }
+}

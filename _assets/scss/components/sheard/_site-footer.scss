@@ -1,0 +1,12 @@
+#site-footer {
+    background-color: $main-footer-background-color;
+    color: $main-a-text-color;
+    
+    & > section {
+        text-align: center;
+
+        & p:last-of-type {
+            padding-bottom: 0;
+        }
+    }
+}

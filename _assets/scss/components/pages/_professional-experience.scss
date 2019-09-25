@@ -1,0 +1,227 @@
+.professional-experience {
+  & .page-content {
+    padding-bottom: 2em;
+
+
+    & #timeline {
+      padding-top: 3em;
+      padding-left: 1em;
+      position: relative;
+
+      & .start-and-now:after, & .start-and-now:before {
+        display: block;
+        position: absolute;
+        background: $headings-text-color;
+        color: $secondary-background-color;
+        padding: 0.3em;
+        border: 2px solid $primary-background-color;
+        border-radius: 30%;
+      }
+
+      & .start-and-now:before {
+        content: 'Now';
+        top: 0;
+        margin-left: calc(-0.3em - 1px);
+      }
+
+      & .start-and-now:after {
+        content: 'Start';
+        bottom: -3em;
+        margin-left: calc(-0.3em - 4px);
+      }
+
+      & article {
+        width: 100%;
+        margin: 0 0 20px 0;
+        position: relative;
+
+        & div.content-frame {
+          width: 100%;
+          padding-left: 3em;
+          float: left;
+          margin: 5px 0 0 0;
+          border-radius: 6px;
+
+          & span.dot {
+            display: block;
+            width: 30px;
+            height: 25px;
+            position: absolute;
+            top: 0;
+            left: 1em;
+            margin: 0 0 0 -15px;
+            border-radius: 100%;
+            background: $primary-background-color;
+            border: 3px solid $secondary-background-color;
+            box-shadow: 0 0 0 7px $headings-text-color;
+          }
+
+          & .work {
+            @include animationEvenWorks();
+
+            & header {
+              border-radius: 6px 6px 0 0;
+              position: relative;
+              background: $main-timeline-color;
+              padding: 0.5em;
+  
+              & h3 {
+                padding: 0;
+              }
+  
+              & p {
+                padding-bottom: 0.5em;
+              }
+  
+              & div {
+                display: flex;
+                flex-wrap: wrap;
+  
+                & span {
+                  position: relative;
+                  padding: 0 0.5em 0.5em 1.5em;
+                }
+      
+                & span:before {
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  top: 10%;
+                  width: 1em;
+                  display: block;
+                }
+   
+                & span:nth-of-type(1):before {
+                  content: url('../images/icons/info/calendar-alt-solid.svg');
+                }
+   
+                & span:nth-of-type(2):before {
+                  content: url('../images/icons/info/map-marker-alt-solid.svg');
+                  top: 0;
+                }
+              }
+            }
+
+            & header:after {
+              content: '';
+              position: absolute;
+              top: 15px;
+              left: -5px;
+              width: 10px; 
+              height: 10px;
+              transform: rotate(-45deg);
+              background: $main-timeline-color;
+            }
+
+            .more-info {
+              background: rgb(255, 255, 255);
+              border-radius: 0 0 6px 6px;
+
+              & p {
+                padding: 0.3em 0.5em 0 1em;
+                text-indent: 0.5em;
+              }
+            
+              & ul {
+                padding-left: 1.7em;
+                padding-top: 0.5em;
+                list-style: none;
+
+                & li:before {
+                  content: url('../images/icons/arrows/caret-right-solid.svg');
+                  width: 0.2em;
+                  display: inline-block;
+                  margin-right: 0.5em;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      & article:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      article:nth-child(even) {
+        & div.content-frame {
+          & header {
+            background: $secondary-timeline-color
+          }
+
+          & header:after {
+            background: $secondary-timeline-color
+          }
+        }
+      }
+    }
+
+    & #timeline:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 2em;
+      bottom: -2em;
+      margin: 0 0 0 -1px;
+      width: 2px;
+      background: $headings-text-color;
+    }
+  }
+}
+
+@include mediaScreenFor($tablet) {
+  .professional-experience {
+    & .page-content {
+      & #timeline {
+        padding-left: 0;
+  
+        & .start-and-now:before, .start-and-now:after {
+          left: 50%;
+        }
+  
+        & .start-and-now:before {
+          margin-left: -1.37em;
+        }
+  
+        & .start-and-now:after {
+          margin-left: -1.57em;
+        }
+  
+        & article {
+          & div.content-frame {
+            width: 45%;
+            padding-left: 0;
+  
+            & span.dot {
+              left: 50%;
+            }
+  
+            & .work header:after {
+              right: -5px;
+              left: unset;
+            }
+          }
+        }
+  
+        article:nth-child(even) div.content-frame {
+          float: right;
+  
+          & .work header:after {
+            left: -5px;
+          }
+        }
+
+        article:nth-child(odd) div.content-frame .work {
+          @include animationOddWorks();
+        }
+      }
+  
+      & #timeline:before {
+        left: 50%;
+      }
+    }
+  }
+}

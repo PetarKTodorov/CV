@@ -1,0 +1,50 @@
+html {
+	font-size: $phone-base-font-size;
+	line-height: 1.5;
+	font-family: 'Alegreya SC', serif;
+}
+
+@include mediaScreenFor($tablet) {
+    html { font-size: $tablet-base-font-size }
+}
+
+@include mediaScreenFor($pc) {
+    html { font-size: $pc-base-font-size }
+}
+
+@include mediaScreenFor($tv) {
+    html { font-size: $tv-base-font-size }
+}
+
+body, table, th, td, form, input, textarea, option, select {
+	font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2;
+	padding: 1em 0 0.5em 0;
+	font-weight: bold;
+	color: $headings-text-color;
+}
+
+$headings: (h1: 2.741em, h2: 2.641em, h3: 1.563em, h5: 1.3em, h6: 1em);
+
+@each $heading, $size in $headings {
+	#{$heading} { font-size: $size; }
+}
+
+p, ul, ol {
+	padding-bottom: 1.5em;
+}
+
+ul, ol {
+	padding-left: 2em;
+}
+
+li {
+	list-style-position: inside;
+}
+
+a {
+	text-decoration: none;
+}

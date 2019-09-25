@@ -1,0 +1,116 @@
+#main-nav-toggle {
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#main-nav-toggle:checked + nav {
+    ul {
+        display: block;
+        flex: 1 0 100%;
+    }
+}
+
+#main-nav-toggle:checked + nav + #toggle:before {
+    content: url('../images/icons/navigation-menu/times-solid.svg');
+}
+
+.main-navigation-nav {
+        & ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            display: flex;
+        }
+
+        & .toggle-menu {
+            display: none;
+        }
+
+        & a {
+            display: flex;
+            position: relative;
+            color: $main-a-text-color;
+            padding: 0.5rem;
+            justify-content: center;
+            align-items: center;
+
+            & span {
+                display: flex;
+                align-items: center;
+                min-width: 85px;
+            }
+
+            & span:before {
+                width: 1em;
+                padding-right: 0.3em;
+            }
+        }
+
+        .pr-info li:nth-child(1) a span:before { content: url('../images/icons/navigation-menu/user-alt-solid.svg'); }
+        .pr-info li:nth-child(2) a span:before { content: url('../images/icons/navigation-menu/at-solid.svg'); }
+        .toggle-menu li:nth-child(1) a span:before { content: url('../images/icons/navigation-menu/scroll-solid.svg'); }
+        .toggle-menu li:nth-child(2) a span:before { content: url('../images/icons/navigation-menu/bug-solid.svg'); }
+}
+
+#toggle {
+    cursor: pointer;
+}
+
+#toggle:before {
+    display: block;
+    content: url('../images/icons/navigation-menu/bars-solid.svg');
+    width: 2rem;
+    padding: 0.2em 0.2em 0 0.2em;
+}
+
+@include mediaScreenFor($tablet) {
+    #toggle {
+        display: none;
+    }
+
+    .main-navigation-nav {
+        display: flex;
+
+        & .toggle-menu {
+            display: flex;
+        }
+
+        & a:after  {
+            background-color: $main-a-border-color;
+            content: '';
+            display: block;
+            position: absolute;
+            height: 1em;
+            width: 1px;
+            bottom: 0;
+            left: 0;
+            top: calc(72% - 1em);
+        }
+
+        & .pr-info li:first-child a:after {
+            display: none;
+        }
+    }
+}
+
+@include mediaScreenFor($pc) {
+    .main-navigation-nav {
+        & a:hover {
+            background-color: $main-header-background-color;
+            color: $headings-text-color;
+            @include animationEaseOut(0.4);
+        }
+
+        .pr-info li:nth-child(1) a:hover span:before { content: url('../images/icons/navigation-menu/pc-media/user-alt-solid.svg'); }
+        .pr-info li:nth-child(2) a:hover span:before { content: url('../images/icons/navigation-menu/pc-media/at-solid.svg'); }
+        .toggle-menu li:nth-child(1) a:hover span:before { content: url('../images/icons/navigation-menu/pc-media/scroll-solid.svg'); }
+        .toggle-menu li:nth-child(2) a:hover span:before { content: url('../images/icons/navigation-menu/pc-media/bug-solid.svg'); }
+
+        & a:hover:after {
+            display: none;
+        }
+    }
+}

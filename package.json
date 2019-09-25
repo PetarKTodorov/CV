@@ -1,0 +1,22 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpFile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "child_process": "^1.0.2",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-exec": "^3.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {}
+}
