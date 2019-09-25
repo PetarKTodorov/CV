@@ -1,5 +1,5 @@
 # My CV
-link: 
+link: https://petarktodorov.github.io/CV/ 
 ## Idea
 This resposive site is my first non-educational project. It aims to present me in the best light to my future employers, even though it is just a static site. In it I am telling about myself, what I am interested in, what I am good at, what technologies and programming languages I am skilful at, as well as what is my education, professional experience, and other things.
 ## Design
