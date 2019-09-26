@@ -6,7 +6,7 @@ url: ""
 collections_dir: collections
 collections: [ passions, personalSkills, speakingLanguages, favoriteMovies, favoriteGames, projects ]
 
-exclude: [ _assets, node_modules, Gemfile, Gemfile.lock, gulpFile.js, package.json, package-lock.json, README.md ]
+exclude: [ _assets, node_modules, Gemfile, Gemfile.lock, gulpFile.js, package.json, package-lock.json, README.md, LICENSE ]
 
 # Build settings
 markdown: kramdown
