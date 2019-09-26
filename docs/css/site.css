@@ -600,7 +600,6 @@ form input, form textarea {
   .about-me .page-content #more .favorite-movies section article, .about-me .page-content #more .favorite-games section article {
     flex-basis: 35%;
     text-align: center;
-    border-bottom: 1px dotted #6b8d48;
     margin: 1em 0.5em; }
     .about-me .page-content #more .favorite-movies section article .poster img, .about-me .page-content #more .favorite-games section article .poster img {
       width: 180px;
@@ -665,8 +664,9 @@ form input, form textarea {
     top: -5px;
     width: 1em; }
   .education .page-content .vty input:checked + label, .education .page-content .softuni input:checked + label, .education .page-content .high-school-of-economics input:checked + label, .education .page-content .certificates-and-licenses input:checked + label {
-    border-bottom: 1px dotted #303f21;
     padding-bottom: 1em; }
+  .education .page-content .vty #vty:checked + label, .education .page-content .vty #softuni:checked + label, .education .page-content .vty #high-school-of-economics:checked + label, .education .page-content .vty #certificates-and-licenses:checked + label, .education .page-content .softuni #vty:checked + label, .education .page-content .softuni #softuni:checked + label, .education .page-content .softuni #high-school-of-economics:checked + label, .education .page-content .softuni #certificates-and-licenses:checked + label, .education .page-content .high-school-of-economics #vty:checked + label, .education .page-content .high-school-of-economics #softuni:checked + label, .education .page-content .high-school-of-economics #high-school-of-economics:checked + label, .education .page-content .high-school-of-economics #certificates-and-licenses:checked + label, .education .page-content .certificates-and-licenses #vty:checked + label, .education .page-content .certificates-and-licenses #softuni:checked + label, .education .page-content .certificates-and-licenses #high-school-of-economics:checked + label, .education .page-content .certificates-and-licenses #certificates-and-licenses:checked + label {
+    border-bottom: 1px dotted #303f21; }
   .education .page-content .vty input:checked + label:before, .education .page-content .softuni input:checked + label:before, .education .page-content .high-school-of-economics input:checked + label:before, .education .page-content .certificates-and-licenses input:checked + label:before {
     content: url("../images/icons/arrows/caret-up-solid.svg"); }
   .education .page-content .vty input + label + section, .education .page-content .softuni input + label + section, .education .page-content .high-school-of-economics input + label + section, .education .page-content .certificates-and-licenses input + label + section {
@@ -700,8 +700,11 @@ form input, form textarea {
     .education .page-content .vty .knowledge .knowledge-header span:nth-of-type(3):before, .education .page-content .softuni .knowledge .knowledge-header span:nth-of-type(3):before, .education .page-content .high-school-of-economics .knowledge .knowledge-header span:nth-of-type(3):before, .education .page-content .certificates-and-licenses .knowledge .knowledge-header span:nth-of-type(3):before {
       content: url("../images/icons/info/globe-europe-solid.svg"); }
   .education .page-content .vty .knowledge .knowledge-content label, .education .page-content .softuni .knowledge .knowledge-content label, .education .page-content .high-school-of-economics .knowledge .knowledge-content label, .education .page-content .certificates-and-licenses .knowledge .knowledge-content label {
-    padding: 1em 0 1em 0.3em;
+    padding: 1em 0 1em 0.3em; }
+  .education .page-content .vty .knowledge .knowledge-content label:not(:last-of-type), .education .page-content .softuni .knowledge .knowledge-content label:not(:last-of-type), .education .page-content .high-school-of-economics .knowledge .knowledge-content label:not(:last-of-type), .education .page-content .certificates-and-licenses .knowledge .knowledge-content label:not(:last-of-type) {
     border-bottom: 1px dotted #a1b177; }
+  .education .page-content .vty .knowledge .knowledge-content label:last-of-type, .education .page-content .softuni .knowledge .knowledge-content label:last-of-type, .education .page-content .high-school-of-economics .knowledge .knowledge-content label:last-of-type, .education .page-content .certificates-and-licenses .knowledge .knowledge-content label:last-of-type {
+    padding-bottom: 0; }
   .education .page-content .vty .knowledge .knowledge-content label:before, .education .page-content .softuni .knowledge .knowledge-content label:before, .education .page-content .high-school-of-economics .knowledge .knowledge-content label:before, .education .page-content .certificates-and-licenses .knowledge .knowledge-content label:before {
     padding: 1em 0; }
   .education .page-content .vty .knowledge .knowledge-content > label + section label, .education .page-content .softuni .knowledge .knowledge-content > label + section label, .education .page-content .high-school-of-economics .knowledge .knowledge-content > label + section label, .education .page-content .certificates-and-licenses .knowledge .knowledge-content > label + section label {

@@ -41,8 +41,11 @@
          }
 
          & input:checked + label {
-            border-bottom: 1px dotted $headings-text-color;
             padding-bottom: 1em;
+         }
+
+         #vty:checked + label, #softuni:checked + label, #high-school-of-economics:checked + label, #certificates-and-licenses:checked + label {
+            border-bottom: 1px dotted $headings-text-color;
          }
 
          & input:checked + label:before {
@@ -101,7 +104,14 @@
             & .knowledge-content {
                & label {
                   padding: 1em 0 1em 0.3em;
+               }
+
+               & label:not(:last-of-type) {
                   border-bottom: 1px dotted $primary-background-color;
+               }
+
+               & label:last-of-type {
+                  padding-bottom: 0;
                }
 
                & label:before {
