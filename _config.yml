@@ -4,7 +4,7 @@ destination: docs
 baseurl: "/CV"
 url: ""
 collections_dir: collections
-collections: [ passions, personalSkills, speakingLanguages, favoriteMovies, favoriteGames, projects ]
+collections: [ passions, personalSkills, speakingLanguages, favoriteMovies, favoriteGames, projects, jobs ]
 
 exclude: [ _assets, node_modules, Gemfile, Gemfile.lock, gulpFile.js, package.json, package-lock.json, README.md, LICENSE ]
 

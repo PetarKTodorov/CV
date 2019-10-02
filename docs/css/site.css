@@ -396,12 +396,6 @@ form input, form textarea {
 .about-me .page-content #personal-skills section #responsibility:before {
   content: '90%'; }
 
-.about-me .page-content #personal-skills section #communicative:after {
-  width: 85%; }
-
-.about-me .page-content #personal-skills section #communicative:before {
-  content: '85%'; }
-
 .about-me .page-content #personal-skills section #creativity:after {
   width: 80%; }
 
@@ -419,12 +413,6 @@ form input, form textarea {
 
 .about-me .page-content #personal-skills section #leadership:before {
   content: '86%'; }
-
-.about-me .page-content #personal-skills section #organized:after {
-  width: 90%; }
-
-.about-me .page-content #personal-skills section #organized:before {
-  content: '90%'; }
 
 .about-me .page-content #personal-skills section #make-quick-decisions:after {
   width: 80%; }
@@ -651,7 +639,7 @@ form input, form textarea {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: all 0.5s ease-out; }
+    transition: all 0.3s ease-out; }
     .education .page-content .vty label h3, .education .page-content .vty label h4, .education .page-content .vty label h5, .education .page-content .softuni label h3, .education .page-content .softuni label h4, .education .page-content .softuni label h5, .education .page-content .high-school-of-economics label h3, .education .page-content .high-school-of-economics label h4, .education .page-content .high-school-of-economics label h5, .education .page-content .certificates-and-licenses label h3, .education .page-content .certificates-and-licenses label h4, .education .page-content .certificates-and-licenses label h5 {
       font-size: 1em;
       padding: 0 0 0 1.5em; }

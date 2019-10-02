@@ -20,7 +20,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            @include animationEaseOut(0.5);
+            @include animationEaseOut(0.3);
 
             & h3, & h4, & h5 {
                font-size: 1em;

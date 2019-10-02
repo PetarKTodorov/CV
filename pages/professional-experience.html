@@ -12,54 +12,8 @@ permalink: /professional-experience/
     <section class="page-content">
         <section id="timeline">
             <span class="start-and-now"></span>
-            <article>
-                <div class="content-frame">
-                    <span class="dot"></span>
-                    <section class="work">
-                        <header>
-                            <h3>Promoter</h3>
-                            <p>SKA Vision</p>
-                            <div>
-                                <span>05/2014 - 05/2019</span>
-                                <span>Veliko Tarnovo / Bulgaria</span>
-                            </div>
-                        </header>
-                        <section class="more-info">
-                            <p>As a promoter of different products, I had to talk to different people. It helped me to develop skills like:</p>
-                            <ul>
-                                <li>Work in a team</li>
-                                <li>Communicativity</li>
-                                <li>Plan things carefully and keep things tidy</li>
-                                <li>Adapt to changes</li>
-                            </ul>
-                        </section>
-                    </section>
-                </div>
-            </article>
-            <article>
-                <div class="content-frame">
-                    <span class="dot"></span>
-                    <section class="work">
-                        <header>
-                            <h3>Lifeguard</h3>
-                            <p>Emsen Designs JSC</p>
-                            <div>
-                                <span>06/2018 - 12/2018</span>
-                                <span>Borovets / Bulgaria</span>
-                            </div>
-                        </header>
-                        <section class="more-info">
-                            <p>Working as a lifeguard at a swimming pool and being responsible for saunas and steam baths helped me strengthen such my qualities as:</p>
-                            <ul>
-                                <li>Not to panic</li>
-                                <li>Make quick decisions</li>
-                                <li>Overcome difficuties</li>
-                                <li>Take responsibility</li>
-                            </ul>
-                        </section>
-                    </section>
-                </div>
-            </article>
+            {% assign orderedJobs = site.jobs | sort:"orderNumber" | reverse %}
+            {{orderedJobs}}
         </section>
     </section>
 </section>
