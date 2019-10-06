@@ -3,6 +3,8 @@ body {
 }
 
 #site {
+    overflow: hidden;
+
     $site: &;
 
     @at-root #{$site}-header, 
