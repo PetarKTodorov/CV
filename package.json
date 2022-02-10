@@ -16,7 +16,7 @@
     "gulp-autoprefixer": "^6.0.0",
     "gulp-exec": "^3.0.2",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.11.0"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {}
 }
